@@ -26,9 +26,9 @@ float HCSR04::dist(int n) const
 	digitalWrite(this->out, HIGH);
 	delayMicroseconds(10);
 	digitalWrite(this->out, LOW);
-	noInterrupts();
+	// noInterrupts();
 	float d = pulseIn(this->echo[n], HIGH, 23529.4); // max sensor dist ~4m
-	interrupts();
+	// interrupts();
 	return d / 58.8235;
 }
 float HCSR04::dist() const { return this->dist(0); }
