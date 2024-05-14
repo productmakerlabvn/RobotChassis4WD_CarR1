@@ -4,11 +4,11 @@ Xe điều khiển bằng bluetooth DIY.
 ## Mô tả tính năng:
 Điều khiển xe qua bluetooth bằng ứng dụng <a href="https://play.google.com/store/apps/details?id=io.dabbleapp&hl=vi&gl=US">Dabble</a>.
 
-<img src="image/dabbleicon.png">
+<img src="../../image/dabbleicon.png">
 
 Giao diện điều khiển được sử dụng là Gamepad.
 
-<img src="image/gamepad.png">
+<img src="../../image/gamepad.png">
 
 ### Hướng dẫn:
 - Nhấn giữ ( ˅, ˄ , ˂ , ˃ ) để điều khiển xe.
