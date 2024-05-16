@@ -98,10 +98,10 @@ Xe tránh vật cản nhờ vào cảm biến siêu âm.
 | HCSR04 | VCC | GND |      | TRIG | ECHO |
 | SERVO  | ĐỎ  | NÂU | VÀNG |      |      |
 
-|  UNO  |  D4 |  D5 |  D6 |  D7 |  DC+ | DC- |
+|  UNO  |  D4 |  D5 |  D6 |  D7 |  VIN | GND |
 |:-----:|:---:|:---:|:---:|:---:|:----:|:---:|
-|  L298 | IN1 | IN2 | IN3 | IN4 |  VCC | GND |
-| NGUỒN |     |     |     |     |   +  |  -  |
+|  L298 | IN1 | IN2 | IN3 | IN4 | +12V | GND |
+| NGUỒN |     |     |     |     | VBAT | GND |
 
 |   L298   | OUT1 | OUT2 | OUT3 | OUT4 |
 |:--------:|:----:|:----:|:----:|:----:|
