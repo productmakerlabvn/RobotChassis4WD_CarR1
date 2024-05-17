@@ -119,40 +119,58 @@ Giao diện điều khiển được sử dụng là Gamepad.
 - Nếu các phần cứng trong bài là hoàn toàn mới với các bạn, để có thể nắm được cách hệ thống vận hành, các bạn cần đọc và tìm hiểu về cách sử dụng của từng phần cứng tại trang Wiki của <a href="https://wiki.makerlab.vn/index.php/H%C6%B0%E1%BB%9Bng_d%E1%BA%ABn_s%E1%BB%AD_d%E1%BB%A5ng_ph%E1%BA%A7n_m%E1%BB%81m_Arduino_v%E1%BB%9Bi_c%C3%A1c_m%E1%BA%A1ch_Vietduino_%2B_MakerEdu_Shield_for_Vietduino">Makerlab</a>.
 ## Code Arduino cho thiết bị:
 ```Cpp
-#include "Dabble.h"  // khai báo thư viện
+/**
+ * Tilte: Bluetooth Car R1
+ * Author: Mika
+ * Date: 05/17/2024
+ * Version: v1.0
+ * Purpose: This code is for reference
+*/
+
+// INCLUDE LIBRARIES
+#include "Dabble.h"
 #include <SoftwareSerial.h>
-#include "R1_VAR.h"
+#include "Makerlabvn_SimpleMotor.h"
+
+// DEFINE
+#define PIN_IN1 4
+#define PIN_IN2 5
+#define PIN_IN3 6
+#define PIN_IN4 7
+#define PIN_TX_BLE 2
+#define PIN_RX_BLE 3
+#define SPEED 100
+
+// OBJECT INITIALIZATION
+Makerlabvn_SimpleMotor demoMotor(PIN_IN1, PIN_IN2, PIN_IN3, PIN_IN4);
+SoftwareSerial mySerial(PIN_TX_BLE, PIN_RX_BLE);
+
 
 void setup() {
-
-  demoMotor.car_stop();
-
-  mySerial.begin(115200);
-  Serial.begin(115200);
-  Dabble.begin(mySerial);
+  // put your setup code here, to run once:
+  demoMotor.car_stop();    // Let the car stop
+  mySerial.begin(115200);  // Initialize mySerial baudrate communication
+  Serial.begin(115200);    // Initialize Serial baudrate communication
+  Dabble.begin(mySerial);  // Initialize Dabble baudrate communication
 }
 
+
 void loop() {
-
-  Dabble.processInput();  //hàm nhận tín hiệu từ app Dabble trên điện thoại
-
-  if (GamePad.isUpPressed()) {  //khi nhấn nút ˄
-    demoMotor.motorA_fw(100);
-    demoMotor.motorB_fw(100);
+  // put your main code here, to run repeatedly:
+  Dabble.processInput();             // Receive information from Dabble app
+  if (GamePad.isUpPressed()) {       // When UP BUTTON is pressed
+    demoMotor.car_fw(SPEED, SPEED);  // Let the car go foward
   } else {
-    if (GamePad.isDownPressed()) {  //khi nhấn nút ˅
-      demoMotor.motorA_bw(100);
-      demoMotor.motorB_bw(100);
+    if (GamePad.isDownPressed()) {     // When DOWN BUTTON is pressed
+      demoMotor.car_bw(SPEED, SPEED);  // Let the car go backward
     } else {
-      if (GamePad.isLeftPressed()) {  //khi nhấn nút ˂
-        demoMotor.motorA_bw(100);
-        demoMotor.motorB_fw(100);
+      if (GamePad.isLeftPressed()) {   // When LEFT BUTTON is pressed
+        demoMotor.car_rotateL(SPEED);  // Let the car turn left
       } else {
-        if (GamePad.isRightPressed()) {  //khi nhấn nút ˃
-          demoMotor.motorA_fw(100);
-          demoMotor.motorB_bw(100);
-        } else {  // khi không nhấn 1 trong 4 nút trên
-          demoMotor.car_stop();
+        if (GamePad.isRightPressed()) {  // When RIGHT BUTTON is pressed
+          demoMotor.car_rotateR(SPEED);  // Let the car turn right
+        } else {                         // When no button is pressed
+          demoMotor.car_stop();          // Let the car stop
         }
       }
     }
