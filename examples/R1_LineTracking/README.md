@@ -93,10 +93,10 @@ Xe dò line bằng cảm biến dò line.
 | TCRT 5000 (Giữa) |     | DO |     | 5V | GND |
 | TCRT 5000 (Phải) | DO |     |     | 5V | GND |
 
-|  UNO  |  D4 |  D5 |  D6 |  D7 |  DC+ | DC- |
+|  UNO  |  D4 |  D5 |  D6 |  D7 |  VIN | GND |
 |:-----:|:---:|:---:|:---:|:---:|:----:|:---:|
-|  L298 | IN1 | IN2 | IN3 | IN4 |  VCC | GND |
-| NGUỒN |     |     |     |     |   +  |  -  |
+|  L298 | IN1 | IN2 | IN3 | IN4 | +12V | GND |
+| NGUỒN |     |     |     |     | VBAT | GND |
 
 |   L298   | OUT1 | OUT2 | OUT3 | OUT4 |
 |:--------:|:----:|:----:|:----:|:----:|
