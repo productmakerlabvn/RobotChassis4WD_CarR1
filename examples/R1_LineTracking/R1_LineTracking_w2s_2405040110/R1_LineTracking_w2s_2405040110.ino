@@ -62,11 +62,11 @@ void loop() {
         // When the car lost the line
         if (last_lost_dir == left_dir) {
           // if the vehicle's last direction of travel was to the left
-          demoMotor.car_rotateR(speedForward);
+          demoMotor.car_rotateR(speedForward); // Let the car turn RIGHT
 
         } else {
           // if the vehicle's last direction of travel was to the right
-          demoMotor.car_rotateL(speedForward);
+          demoMotor.car_rotateL(speedForward); // Let the car turn LEFT
         }
       }
     }
