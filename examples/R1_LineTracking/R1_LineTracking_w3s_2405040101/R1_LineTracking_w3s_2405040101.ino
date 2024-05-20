@@ -85,7 +85,7 @@ void loop() {
 
               demoMotor.car_rotateR(speedForward);  // Let the car turn RIGHT
 
-            } else {
+            } else {  // If the car was on the right last time
 
               demoMotor.car_rotateL(speedForward);  // Let the car turn LEFT
             }
