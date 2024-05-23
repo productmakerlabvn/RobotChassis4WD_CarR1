@@ -10,7 +10,6 @@
 #include "Makerlabvn_SimpleMotor.h"
 
 // DEFINE
-#define PIN_OUT1 A1     //! A1
 #define PIN_OUT2 A2     //! A2
 #define PIN_OUT3 A3     //! A3
 #define PIN_IN1 4       //! D4
