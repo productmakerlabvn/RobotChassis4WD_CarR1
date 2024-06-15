@@ -7,7 +7,7 @@
 */
 
 // Include libraries
-#include <HCSR04.h>
+#include <MKL_HCSR04.h>
 #include <Makerlabvn_SimpleMotor.h>
 #include <Servo.h>
 
@@ -22,7 +22,7 @@
 
 // Object initialization
 Makerlabvn_SimpleMotor Driver(4, 5, 6, 7);
-HCSR04 Scaner(9, 10);
+MKL_HCSR04 Scaner(9, 10);
 Servo Rotater;
 
 // Variable
