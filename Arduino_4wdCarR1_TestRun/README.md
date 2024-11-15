@@ -1,4 +1,5 @@
 # Arduino - 4WD Car R1 Robot Kit - Test Run
+![4WD_Car_R1](/image/4wdcar3.webp)
 ## Tóm tắt ý tưởng:
 Phần này sẽ test chức năng cơ bản của mạch điều khiển động cơ L298 và các động cơ giúp robot thực hiện chạy tiến, lùi, trái, phải qua bộ thư viện Simple Motor.
 ## Mô tả tính năng:
