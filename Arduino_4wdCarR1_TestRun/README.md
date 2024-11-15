@@ -14,7 +14,10 @@ Code mẫu sẽ chạy tuần tự mỗi hành động trong 2s: xoay tại ch�
 | ĐỘNG CƠ  |  DC1 |  DC1 |  DC2 |  DC2 |
 
 ## Cài đặt phần mềm:
-
+- Tải và cài đặt [phần mềm Arduino tại đây.](https://www.arduino.cc/en/software)
+- Trong Tools / Library Manager, tìm và cài đặt bộ thư viện tổng hợp "MAKERLABVN" by MakerLab.vn
+- Mở chương trình mẫu [tại đây.](https://github.com/productmakerlabvn/RobotChassis4WD_CarR1/tree/main/Arduino_4wdCarR1_TestRun)
+- Chọn board là Arduino Uno, chọn đúng cổng COM Port của mạch và tiến hành nạp chương trình.
 ## Code Arduino cho thiết bị:
 ```Cpp
 /**
