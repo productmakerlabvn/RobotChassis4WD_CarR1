@@ -17,3 +17,10 @@ Arduino - 4WD Car R1 Robot Kit giúp bạn có thể tự chế tạo một chi�
 - [Hướng dẫn làm Robot điều khiển qua Bluetooth bằng Smartphone.](https://github.com/productmakerlabvn/RobotChassis4WD_CarR1/tree/main/Arduino_4wdCarR1_Bluetooth)
 - [Hướng dẫn làm Robot tự hành tránh vật cản bằng cảm biến siêu âm.](https://github.com/productmakerlabvn/RobotChassis4WD_CarR1/tree/main/Arduino_4wdCarR1_ObstacleAvoidance)
 - [Hướng dẫn làm Robot tự hành dò theo đường line màu.](https://github.com/productmakerlabvn/RobotChassis4WD_CarR1/tree/main/Arduino_4wdCarR1_LineTracking)
+
+## Hỗ trợ và liên hệ:
+- Website: [https://www.makerlab.vn/](https://www.makerlab.vn/)
+- Facebook: [https://www.facebook.com/makerlabvn](https://www.facebook.com/makerlabvn)
+
+## Nhà phân phối
+- Các bạn có thể mua sản phẩm tại các [nhà phân phối của MakerLab](https://www.makerlab.vn/distributor/).
